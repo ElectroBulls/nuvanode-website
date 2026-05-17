@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #82cfff;
+  --primary-container: #00aeef;
+  --background: #05151b;
+  --surface: #05151b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #05151b;
+  color: #d4e5ee;
+  font-family: 'Hanken Grotesk', sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── Bubble cursor ── */
+#bubble-cursor {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(0,174,239,0.25) 0%, rgba(0,174,239,0.05) 70%);
+  border: 1px solid rgba(0,174,239,0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s ease, height 0.15s ease, opacity 0.15s ease, left 0.05s linear, top 0.05s linear;
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+
+#bubble-cursor.visible {
+  opacity: 1;
+}
+
+#bubble-cursor.hovering {
+  width: 64px;
+  height: 64px;
+  background: radial-gradient(circle, rgba(0,174,239,0.35) 0%, rgba(0,174,239,0.08) 70%);
+}
+
+/* ── Touch ripple for mobile ── */
+.touch-ripple {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(circle, rgba(0,174,239,0.3) 0%, transparent 70%);
+  animation: ripple-out 0.7s ease-out forwards;
+}
+
+@keyframes ripple-out {
+  0%   { width:0; height:0; opacity:0.6; transform:translate(-50%,-50%) scale(0); }
+  100% { width:80px; height:80px; opacity:0; transform:translate(-50%,-50%) scale(1); }
+}
+
+/* ── Glassmorphism card ── */
+.glass-card {
+  background: linear-gradient(135deg, rgba(18,34,40,0.95) 0%, rgba(2,16,22,0.97) 100%);
+  border: 1px solid rgba(0,174,239,0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-card:hover {
+  border-color: rgba(0,174,239,0.4);
+  box-shadow: 0 0 28px rgba(0,174,239,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ── Gradient text ── */
+.text-gradient {
+  background: linear-gradient(135deg, #d4e5ee 0%, #82cfff 50%, #00aeef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glitter shimmer text ── */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #82cfff 0%,
+    #ffffff 25%,
+    #00aeef 50%,
+    #ffffff 75%,
+    #82cfff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ── Glow on hover ── */
+.hover-glow:hover {
+  box-shadow: 0 0 28px rgba(0,174,239,0.35);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ── Nav blur ── */
+.nav-glass {
+  background: rgba(5,21,27,0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 0 24px rgba(0,174,239,0.08);
+}
+
+/* ── Hero slider ── */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* ── Input focus ── */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #82cfff !important;
+  box-shadow: 0 0 16px rgba(0,174,239,0.2) !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #05151b; }
+::-webkit-scrollbar-thumb { background: rgba(0,174,239,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,174,239,0.6); }
+
+/* ── Section fade-in animations ── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Primary button ── */
+.btn-primary {
+  background: #00aeef;
+  color: #001e2d;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-primary:hover {
+  background: #82cfff;
+  box-shadow: 0 0 24px rgba(0,174,239,0.5);
+  transform: translateY(-1px);
+}
+
+/* ── Outline button ── */
+.btn-outline {
+  background: transparent;
+  border: 1px solid #82cfff;
+  color: #82cfff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-outline:hover {
+  background: rgba(130,207,255,0.08);
+  box-shadow: 0 0 20px rgba(0,174,239,0.25);
+  transform: translateY(-1px);
+}
+
+/* ── Mobile: restore normal cursor, show touch ripples ── */
+@media (pointer: coarse) {
+  body { cursor: auto; }
+  #bubble-cursor { display: none; }
+}
+
+/* ── Staggered animation delays ── */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
