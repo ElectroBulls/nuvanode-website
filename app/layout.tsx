@@ -17,7 +17,7 @@ const hanken = Hanken_Grotesk({
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "800"],
   display: "swap",
 });
 
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/nuvanode-icon.png",
-    apple: "/nuvanode-icon.png",
+    icon: "/nuvanode-site-icon.png",
+    apple: "/nuvanode-site-icon.png",
   },
 };
 

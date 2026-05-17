@@ -25,6 +25,9 @@ const slides = [
 
 export default function HeroSlider() {
   const [active, setActive] = useState(0);
+  // `displayed` tracks which slide's text is shown — updates after text fades out
+  const [displayed, setDisplayed] = useState(0);
+  const [textVisible, setTextVisible] = useState(true);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -33,69 +36,81 @@ export default function HeroSlider() {
     return () => clearInterval(id);
   }, []);
 
+  // When active changes: fade text out → swap content → fade text in
+  useEffect(() => {
+    setTextVisible(false);
+    const t = setTimeout(() => {
+      setDisplayed(active);
+      setTextVisible(true);
+    }, 450);
+    return () => clearTimeout(t);
+  }, [active]);
+
+  const slide = slides[displayed];
+
   return (
     <section className="relative w-full overflow-hidden" style={{ height: "clamp(520px, 88vh, 820px)" }}>
-      {/* Slides */}
-      {slides.map((slide, i) => (
+
+      {/* Background images — smooth cross-fade */}
+      {slides.map((s, i) => (
         <div
           key={i}
           className="absolute inset-0"
           style={{
             opacity: i === active ? 1 : 0,
-            zIndex: i === active ? 2 : 1,
+            zIndex: 1,
             transition: "opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1)",
             willChange: "opacity",
           }}
         >
-          {/* Background image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={slide.image}
-            alt={slide.imageAlt}
+            src={s.image}
+            alt={s.imageAlt}
             className="absolute inset-0 w-full h-full object-cover"
             style={{ filter: "brightness(0.25) saturate(0.6)" }}
           />
-          {/* Gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#05151b] via-[#05151b]/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#05151b] via-transparent to-transparent" />
-
-          {/* Content */}
-          <div className="absolute inset-0 flex flex-col justify-center max-w-[1280px] mx-auto px-6 md:px-16">
-            <div className="max-w-2xl">
-              <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4">
-                Nuvanode · Talent Search &amp; Advisory
-              </p>
-              <h1
-                className="font-sans font-bold text-white mb-6"
-                style={{
-                  fontSize: "clamp(36px, 6vw, 72px)",
-                  lineHeight: "1.1",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {slide.label}
-              </h1>
-              <p className="text-[#bdc8d1] text-lg leading-relaxed max-w-lg">
-                {slide.sub}
-              </p>
-              <div className="flex flex-wrap gap-4 mt-8">
-                <a
-                  href="/contact"
-                  className="btn-primary px-7 py-3 rounded-sm text-[12px]"
-                >
-                  Start a Conversation
-                </a>
-                <a
-                  href="/services"
-                  className="btn-outline px-7 py-3 rounded-sm text-[12px]"
-                >
-                  Explore Services
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       ))}
+
+      {/* Text layer — sequential fade: out → swap → in */}
+      <div
+        className="absolute inset-0 flex flex-col justify-center max-w-[1280px] mx-auto px-6 md:px-16"
+        style={{
+          zIndex: 2,
+          opacity: textVisible ? 1 : 0,
+          transition: "opacity 0.45s ease-in-out",
+        }}
+      >
+        <div className="max-w-2xl">
+          <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4">
+            Nuvanode · Talent Search &amp; Advisory
+          </p>
+          <h1
+            className="font-sans font-bold text-white mb-6"
+            style={{
+              fontSize: "clamp(36px, 6vw, 72px)",
+              lineHeight: "1.1",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {slide.label}
+          </h1>
+          <p className="text-[#bdc8d1] text-lg leading-relaxed max-w-lg">
+            {slide.sub}
+          </p>
+          <div className="flex flex-wrap gap-4 mt-8">
+            <a href="/contact" className="btn-primary px-7 py-3 rounded-sm text-[12px]">
+              Start a Conversation
+            </a>
+            <a href="/services" className="btn-outline px-7 py-3 rounded-sm text-[12px]">
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </div>
 
       {/* Dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
