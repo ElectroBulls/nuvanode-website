@@ -42,8 +42,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/nuvanode-site-icon.png",
-    apple: "/nuvanode-site-icon.png",
+    icon: [{ url: "/nuvanode-site-icon.png", type: "image/png" }],
+    apple: [{ url: "/nuvanode-site-icon.png", type: "image/png" }],
+    shortcut: [{ url: "/nuvanode-site-icon.png", type: "image/png" }],
   },
 };
 
