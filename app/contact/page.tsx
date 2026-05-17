@@ -71,7 +71,7 @@ export default function ContactPage() {
   return (
     <div className="pt-20">
       {/* ── Hero ── */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=60&auto=format&fit=crop"
@@ -82,14 +82,14 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#05151b]/40 to-[#05151b]" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-16">
-          <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4 animate-on-scroll">
+          <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-5 animate-on-scroll">
             Let&apos;s Talk
           </p>
           <h1
             className="text-gradient font-sans font-bold mb-6 animate-on-scroll"
             style={{ fontSize: "clamp(36px, 6vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}
           >
-            Connect with Precision.
+            Connect Now
           </h1>
           <p className="text-[#bdc8d1] text-lg leading-relaxed max-w-2xl animate-on-scroll">
             Whether you&apos;re ready to start a search, explore a strategic
@@ -100,7 +100,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── Main Contact Grid ── */}
-      <section className="py-20 md:py-28">
+      <section className="py-10 md:py-14">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
@@ -113,9 +113,8 @@ export default function ContactPage() {
                   Fill out the form below and we&apos;ll get back to you within 24 hours.
                 </p>
                 <form
-                  action="mailto:shalini@nuvanode.com"
-                  method="post"
-                  encType="text/plain"
+                  action="https://formspree.io/f/xyzyrjwp"
+                  method="POST"
                   className="space-y-6 relative z-10"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

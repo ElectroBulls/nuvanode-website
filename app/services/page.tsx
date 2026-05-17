@@ -127,7 +127,7 @@ export default function ServicesPage() {
   return (
     <div className="pt-20">
       {/* ── Hero ── */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=60&auto=format&fit=crop"
@@ -138,7 +138,7 @@ export default function ServicesPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#05151b]/40 to-[#05151b]" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-16 text-center">
-          <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4 animate-on-scroll">
+          <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4 animate-on-scroll">
             What We Offer
           </p>
           <h1
@@ -155,7 +155,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Services ── */}
-      <section className="py-20 md:py-28">
+      <section className="py-10 md:py-14">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16 space-y-16">
           {services.map((service, i) => (
             <div

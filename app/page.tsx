@@ -61,7 +61,7 @@ export default function HomePage() {
       {/* ── Value Proposition ── */}
       <section className="py-20 border-b border-white/5">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16 text-center animate-on-scroll">
-          <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-5">
+          <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-5">
             Our Purpose
           </p>
           <p
@@ -103,7 +103,7 @@ export default function HomePage() {
       <section className="py-24 md:py-32">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16">
           <div className="text-center mb-16 animate-on-scroll">
-            <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4">
+            <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4">
               What We Do
             </p>
             <h2

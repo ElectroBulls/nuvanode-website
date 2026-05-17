@@ -21,9 +21,9 @@ export default function Footer() {
               <Image
                 src="/nuvanode-logo.png"
                 alt="Nuvanode Logo"
-                height={36}
-                width={144}
-                className="h-9 w-auto object-contain"
+                height={52}
+                width={208}
+                className="h-13 w-auto object-contain"
               />
             </Link>
             <p className="text-[#87929b] text-sm leading-relaxed max-w-xs">
@@ -95,6 +95,11 @@ export default function Footer() {
               <li>
                 <Link href="https://www.linkedin.com/in/salinic/" target="_blank" rel="noopener noreferrer" className="text-[#bdc8d1] hover:text-[#82cfff] text-sm transition-colors duration-200">
                   Founder on LinkedIn
+                </Link>
+              </li>
+              <li>
+                <Link href="https://www.linkedin.com/company/nuvanode-consulting/" target="_blank" rel="noopener noreferrer" className="text-[#bdc8d1] hover:text-[#82cfff] text-sm transition-colors duration-200">
+                  Nuvanode on LinkedIn
                 </Link>
               </li>
             </ul>

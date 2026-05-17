@@ -36,8 +36,8 @@ export default function BubbleCursor() {
 
     const loop = () => {
       // Smooth lag follow
-      curX += (mouseX - curX) * 0.15;
-      curY += (mouseY - curY) * 0.15;
+      curX += (mouseX - curX) * 0.4;
+      curY += (mouseY - curY) * 0.4;
       cursor.style.left = `${curX}px`;
       cursor.style.top = `${curY}px`;
       checkHover();

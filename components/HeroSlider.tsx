@@ -57,8 +57,8 @@ export default function HeroSlider() {
           {/* Content */}
           <div className="absolute inset-0 flex flex-col justify-center max-w-[1280px] mx-auto px-6 md:px-16">
             <div className="max-w-2xl">
-              <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4">
-                Nuvanode · Talent Search & Advisory
+              <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4">
+                Nuvanode · Talent Search &amp; Advisory
               </p>
               <h1
                 className="font-sans font-bold text-white mb-6"

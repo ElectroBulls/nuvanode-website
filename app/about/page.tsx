@@ -58,7 +58,7 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* ── Page Hero ── */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-20 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600&q=60&auto=format&fit=crop"
@@ -69,7 +69,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#05151b]/50 to-[#05151b]" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-16">
-          <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4 animate-on-scroll">
+          <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4 animate-on-scroll">
             Who We Are
           </p>
           <h1
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Main Content ── */}
-      <section className="py-20 md:py-28">
+      <section className="py-10 md:py-14">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Text */}
@@ -129,10 +129,10 @@ export default function AboutPage() {
                 <div className="glass-card rounded-xl overflow-hidden relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop"
-                    alt="Professional leader in a corporate setting"
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80&auto=format&fit=crop"
+                    alt="Professional team of executives in suits collaborating"
                     className="w-full aspect-[4/5] object-cover"
-                    style={{ filter: "brightness(0.75) saturate(0.7)" }}
+                    style={{ filter: "brightness(0.65) saturate(0.6)" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#05151b] via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6">
@@ -154,7 +154,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 bg-[#021016] border-y border-white/5">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16">
           <div className="text-center mb-16 animate-on-scroll">
-            <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4">
+            <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4">
               How We Work
             </p>
             <h2
@@ -191,7 +191,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16">
           <div className="mb-12 animate-on-scroll">
-            <p className="font-mono text-[11px] tracking-[0.15em] text-[#00aeef] uppercase mb-4">
+            <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-4">
               Leadership
             </p>
             <div className="flex items-center gap-6">
@@ -205,45 +205,35 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="glass-card rounded-xl p-8 md:p-12 border-l-2 border-l-[#00aeef] hover-glow transition-all duration-300 animate-on-scroll">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-              {/* Profile */}
-              <div className="md:col-span-4 space-y-6">
-                <div className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-[#00aeef]/30">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80&auto=format&fit=crop"
-                    alt="Salini C, Founder"
-                    className="w-full h-full object-cover"
-                    style={{ filter: "brightness(0.85) saturate(0.7)" }}
-                  />
-                  <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,174,239,0.2)]" />
-                </div>
+          <div className="glass-card rounded-xl border-l-2 border-l-[#00aeef] hover-glow transition-all duration-300 animate-on-scroll overflow-hidden">
+            {/* Top accent bar */}
+            <div className="h-px bg-gradient-to-r from-[#00aeef] via-[#82cfff]/40 to-transparent" />
+
+            <div className="p-8 md:p-12">
+              {/* Name + title row */}
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-8 border-b border-[#3e4850]/60">
                 <div>
-                  <h3 className="text-gradient font-sans font-bold text-2xl">Salini C</h3>
-                  <p className="font-mono text-[11px] tracking-[0.1em] text-[#00aeef] uppercase mt-1">
-                    Founder & Principal Advisor
-                  </p>
-                </div>
-                <div className="space-y-3 text-[#bdc8d1] text-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="w-1 h-1 rounded-full bg-[#00aeef]" />
-                    <span>17+ Years of Experience</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-1 h-1 rounded-full bg-[#00aeef]" />
-                    <span>Executive & Large-scale Hiring</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-1 h-1 rounded-full bg-[#00aeef]" />
-                    <span>Talent Strategy & Transformation</span>
+                  {/* Decorative initial */}
+                  <div className="flex items-center gap-5 mb-4">
+                    <div
+                      className="w-16 h-16 rounded-sm flex items-center justify-center font-sans font-bold text-3xl text-[#001e2d] flex-shrink-0"
+                      style={{ background: "linear-gradient(135deg, #00aeef, #82cfff)" }}
+                    >
+                      S
+                    </div>
+                    <div>
+                      <h3 className="text-gradient font-sans font-bold text-3xl leading-tight">Salini C</h3>
+                      <p className="font-mono text-[11px] tracking-[0.12em] text-[#00aeef] uppercase mt-1.5">
+                        Founder &amp; Consultant
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <Link
                   href="https://www.linkedin.com/in/salinic/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline px-5 py-2.5 rounded-sm text-[11px] inline-flex items-center gap-2"
+                  className="btn-outline px-5 py-2.5 rounded-sm text-[11px] inline-flex items-center gap-2 self-start md:self-auto"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -252,34 +242,61 @@ export default function AboutPage() {
                 </Link>
               </div>
 
-              {/* Bio */}
-              <div className="md:col-span-8 space-y-6">
-                <p className="text-[#d4e5ee] text-lg leading-relaxed font-light">
-                  Nuvanode is led by Salini C, a talent and HR leader with over 17 years
-                  of experience across leading organizations including Unilever, Wipro,
-                  KPMG, Deloitte, and Crompton.
-                </p>
-                <p className="text-[#bdc8d1] text-base leading-relaxed">
-                  Her experience spans executive and large-scale hiring, talent strategy,
-                  employer branding, organization development, and people transformation
-                  initiatives across diverse business environments. She has partnered with
-                  organizations at various stages of growth — from high-growth startups
-                  to large enterprises — helping them build the talent foundations needed
-                  to perform and scale.
-                </p>
+              {/* Stat highlights */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                {[
+                  { value: "17+", label: "Years Experience" },
+                  { value: "5", label: "Global Organisations" },
+                  { value: "C-Suite", label: "Level Hiring" },
+                  { value: "Multi-Sector", label: "Domain Expertise" },
+                ].map((stat) => (
+                  <div key={stat.label} className="bg-[#0d1e24] rounded-sm p-4 border border-[#3e4850]/50 hover:border-[#82cfff]/40 transition-colors text-center">
+                    <p className="shimmer-text font-bold font-sans text-xl mb-1">{stat.value}</p>
+                    <p className="font-mono text-[10px] tracking-[0.08em] text-[#87929b] uppercase">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
 
-                {/* Experience grid */}
-                <div className="pt-4">
-                  <p className="font-mono text-[11px] tracking-[0.1em] text-[#87929b] uppercase mb-4">
-                    Select Experience
+              {/* Bio */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-4 text-[#bdc8d1] text-base leading-relaxed">
+                  <p>
+                    Nuvanode is led by Salini C, a talent and HR leader with over 17 years
+                    of experience across leading organizations including Unilever, Wipro,
+                    KPMG, Deloitte, and Crompton.
                   </p>
-                  <div className="flex flex-wrap gap-3">
-                    {experiences.map((exp) => (
-                      <div
-                        key={exp.name}
-                        className="px-4 py-2 rounded-sm border border-[#3e4850] hover:border-[#82cfff]/50 hover:bg-[#00aeef]/5 transition-all duration-200 text-sm text-[#d4e5ee] font-semibold"
-                      >
-                        {exp.name}
+                  <p>
+                    Her experience spans executive and large-scale hiring, talent strategy,
+                    employer branding, organization development, and people transformation
+                    initiatives across diverse business environments.
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <div>
+                    <p className="font-mono text-[11px] tracking-[0.1em] text-[#87929b] uppercase mb-3">
+                      Select Experience
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {experiences.map((exp) => (
+                        <div
+                          key={exp.name}
+                          className="px-4 py-2 rounded-sm border border-[#3e4850] hover:border-[#82cfff]/50 hover:bg-[#00aeef]/5 transition-all duration-200 text-sm text-[#d4e5ee] font-semibold"
+                        >
+                          {exp.name}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="space-y-2 text-sm text-[#bdc8d1]">
+                    {[
+                      "Executive & Large-scale Hiring",
+                      "Talent Strategy & Employer Branding",
+                      "Organisation Development",
+                      "People Transformation Initiatives",
+                    ].map((item) => (
+                      <div key={item} className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#00aeef] flex-shrink-0" />
+                        {item}
                       </div>
                     ))}
                   </div>
