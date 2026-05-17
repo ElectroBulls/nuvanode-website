@@ -39,8 +39,13 @@ export default function HeroSlider() {
       {slides.map((slide, i) => (
         <div
           key={i}
-          className={`hero-slide ${i === active ? "active" : ""}`}
-          style={{ zIndex: i === active ? 2 : 1 }}
+          className="absolute inset-0"
+          style={{
+            opacity: i === active ? 1 : 0,
+            zIndex: i === active ? 2 : 1,
+            transition: "opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1)",
+            willChange: "opacity",
+          }}
         >
           {/* Background image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}

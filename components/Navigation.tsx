@@ -38,13 +38,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-16 h-24">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <div className="relative h-14 w-auto">
+            <div className="relative h-16 w-auto">
               <Image
                 src="/nuvanode-logo.png"
                 alt="Nuvanode Logo"
-                height={56}
-                width={224}
-                className="h-14 w-auto object-contain group-hover:drop-shadow-[0_0_10px_rgba(0,174,239,0.7)] transition-all duration-300"
+                height={64}
+                width={256}
+                className="h-16 w-auto object-contain group-hover:drop-shadow-[0_0_10px_rgba(0,174,239,0.7)] transition-all duration-300"
                 priority
               />
             </div>

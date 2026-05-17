@@ -118,17 +118,6 @@ body {
   box-shadow: 0 0 24px rgba(0,174,239,0.08);
 }
 
-/* ── Hero slider ── */
-.hero-slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.hero-slide.active {
-  opacity: 1;
-}
-
 /* ── Input focus ── */
 input:focus, textarea:focus, select:focus {
   outline: none;
