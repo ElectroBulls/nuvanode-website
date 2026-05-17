@@ -69,7 +69,7 @@ const socialLinks = [
 
 export default function ContactPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* ── Hero ── */}
       <section className="relative py-16 md:py-20 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}

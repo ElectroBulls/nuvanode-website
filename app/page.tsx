@@ -54,7 +54,7 @@ const stats = [
 
 export default function HomePage() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* ── Hero Slider ── */}
       <HeroSlider />
 

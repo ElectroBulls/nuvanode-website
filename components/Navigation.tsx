@@ -35,16 +35,16 @@ export default function Navigation() {
           scrolled ? "shadow-[0_4px_30px_rgba(0,174,239,0.1)]" : ""
         }`}
       >
-        <div className="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-16 h-20">
+        <div className="flex justify-between items-center max-w-[1280px] mx-auto px-6 md:px-16 h-24">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-            <div className="relative h-10 w-auto">
+            <div className="relative h-14 w-auto">
               <Image
                 src="/nuvanode-logo.png"
                 alt="Nuvanode Logo"
-                height={40}
-                width={160}
-                className="h-10 w-auto object-contain group-hover:drop-shadow-[0_0_8px_rgba(0,174,239,0.6)] transition-all duration-300"
+                height={56}
+                width={224}
+                className="h-14 w-auto object-contain group-hover:drop-shadow-[0_0_10px_rgba(0,174,239,0.7)] transition-all duration-300"
                 priority
               />
             </div>
@@ -58,9 +58,9 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-mono text-[11px] tracking-[0.1em] uppercase transition-all duration-300 pb-0.5 ${
+                  className={`font-mono text-[13px] font-bold tracking-[0.08em] uppercase transition-all duration-300 pb-0.5 ${
                     active
-                      ? "text-[#82cfff] border-b border-[#82cfff]"
+                      ? "text-[#82cfff] border-b-2 border-[#82cfff]"
                       : "text-[#bdc8d1] hover:text-[#82cfff]"
                   }`}
                 >
@@ -131,7 +131,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-mono text-[11px] tracking-[0.1em] uppercase py-3 border-b border-white/5 transition-colors ${
+                  className={`font-mono text-[13px] font-bold tracking-[0.08em] uppercase py-3 border-b border-white/5 transition-colors ${
                     active ? "text-[#82cfff]" : "text-[#bdc8d1] hover:text-[#82cfff]"
                   }`}
                 >

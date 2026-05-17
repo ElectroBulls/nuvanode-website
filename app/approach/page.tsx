@@ -107,14 +107,14 @@ const phases: Phase[] = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80&auto=format&fit=crop",
-    imageAlt: "Growth and scaling",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&q=80&auto=format&fit=crop",
+    imageAlt: "Growth chart on a vision board in a board meeting",
   },
 ];
 
 export default function ApproachPage() {
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       {/* ── Hero ── */}
       <section className="relative py-16 md:py-20 overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -144,24 +144,20 @@ export default function ApproachPage() {
       </section>
 
       {/* ── Phase Overview Strip ── */}
-      <section className="py-10 bg-[#021016] border-y border-white/5 overflow-x-auto">
+      <section className="py-8 bg-[#021016] border-y border-white/5">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16">
-          <div className="flex items-center gap-0 min-w-max md:min-w-0">
-            {phases.map((phase, i) => (
-              <div key={phase.id} className="flex items-center">
-                <div className="flex flex-col items-center px-4 py-2 group cursor-default">
-                  <span className="font-mono text-[10px] tracking-[0.1em] text-[#87929b] uppercase mb-1">
-                    Phase {phase.id}
-                  </span>
-                  <span className="text-[#82cfff] font-semibold text-sm group-hover:text-white transition-colors">
-                    {phase.title}
-                  </span>
-                </div>
-                {i < phases.length - 1 && (
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[#3e4850] flex-shrink-0">
-                    <path strokeLinecap="round" strokeLinejoin="round" stroke="currentColor" strokeWidth="1.5" d="M9 5l7 7-7 7" />
-                  </svg>
-                )}
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+            {phases.map((phase) => (
+              <div
+                key={phase.id}
+                className="flex flex-col items-center text-center px-2 py-3 rounded-sm border border-[#3e4850]/40 hover:border-[#82cfff]/40 hover:bg-[#00aeef]/5 transition-all duration-200 cursor-default"
+              >
+                <span className="font-mono text-[9px] tracking-[0.1em] text-[#87929b] uppercase mb-1">
+                  {phase.id}
+                </span>
+                <span className="text-[#82cfff] font-semibold text-xs md:text-sm leading-tight">
+                  {phase.title}
+                </span>
               </div>
             ))}
           </div>
