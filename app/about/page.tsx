@@ -206,102 +206,135 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="glass-card rounded-xl border-l-2 border-l-[#00aeef] hover-glow transition-all duration-300 animate-on-scroll overflow-hidden">
-            {/* Top accent bar */}
-            <div className="h-px bg-gradient-to-r from-[#00aeef] via-[#82cfff]/40 to-transparent" />
+          <div className="glass-card rounded-xl overflow-hidden hover-glow transition-all duration-300 animate-on-scroll border border-white/5">
+            {/* Top cyan accent line */}
+            <div className="h-[2px] bg-gradient-to-r from-[#00aeef] via-[#82cfff]/60 to-transparent" />
 
-            <div className="p-8 md:p-12">
-              {/* Name + title row */}
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-8 border-b border-[#3e4850]/60">
-                <div>
-                  {/* Decorative initial */}
-                  <div className="flex items-center gap-5 mb-4">
-                    <div
-                      className="w-16 h-16 rounded-sm flex items-center justify-center font-sans font-bold text-3xl text-[#001e2d] flex-shrink-0"
-                      style={{ background: "linear-gradient(135deg, #00aeef, #82cfff)" }}
+            <div className="grid grid-cols-1 lg:grid-cols-12">
+
+              {/* ── Photo column ── */}
+              <div className="lg:col-span-4 relative overflow-hidden">
+                {/* Left accent strip */}
+                <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#00aeef] via-[#82cfff]/40 to-transparent z-10" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/shalini-c.jpeg"
+                  alt="Shalini C, Founder & Consultant at Nuvanode"
+                  className="w-full h-72 lg:h-full object-cover object-top"
+                  style={{ filter: "brightness(0.88) saturate(0.72)" }}
+                />
+                {/* Gradient overlays */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#05151b]/95 via-[#05151b]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#05151b]/60 hidden lg:block" />
+                {/* Name overlay — mobile only */}
+                <div className="absolute bottom-5 left-6 right-6 lg:hidden">
+                  <h3
+                    className="text-gradient font-sans font-bold leading-tight"
+                    style={{ fontSize: "clamp(26px, 5vw, 34px)" }}
+                  >
+                    Shalini C
+                  </h3>
+                  <p className="font-mono text-[11px] tracking-[0.12em] text-[#00aeef] uppercase mt-1.5">
+                    Founder &amp; Consultant
+                  </p>
+                </div>
+              </div>
+
+              {/* ── Content column ── */}
+              <div className="lg:col-span-8 p-8 md:p-12 flex flex-col gap-8">
+
+                {/* Name + title (desktop) + LinkedIn */}
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 border-b border-[#3e4850]/60">
+                  <div className="hidden lg:block">
+                    <h3
+                      className="text-gradient font-sans font-bold leading-tight"
+                      style={{ fontSize: "clamp(28px, 3vw, 40px)" }}
                     >
-                      S
-                    </div>
-                    <div>
-                      <h3 className="text-gradient font-sans font-bold text-3xl leading-tight">Salini C</h3>
-                      <p className="font-mono text-[11px] tracking-[0.12em] text-[#00aeef] uppercase mt-1.5">
-                        Founder &amp; Consultant
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <Link
-                  href="https://www.linkedin.com/in/salinic/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline px-5 py-2.5 rounded-sm text-[11px] inline-flex items-center gap-2 self-start md:self-auto"
-                >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                  Connect on LinkedIn
-                </Link>
-              </div>
-
-              {/* Stat highlights */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                {[
-                  { value: "17+", label: "Years Experience" },
-                  { value: "5", label: "Global Organisations" },
-                  { value: "C-Suite", label: "Level Hiring" },
-                  { value: "Multi-Sector", label: "Domain Expertise" },
-                ].map((stat) => (
-                  <div key={stat.label} className="bg-[#0d1e24] rounded-sm p-4 border border-[#3e4850]/50 hover:border-[#82cfff]/40 transition-colors text-center">
-                    <p className="shimmer-text font-bold font-sans text-xl mb-1">{stat.value}</p>
-                    <p className="font-mono text-[10px] tracking-[0.08em] text-[#87929b] uppercase">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bio */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-4 text-[#bdc8d1] text-base leading-relaxed">
-                  <p>
-                    Nuvanode is led by Salini C, a talent and HR leader with over 17 years
-                    of experience across leading organizations including Unilever, Wipro,
-                    KPMG, Deloitte, and Crompton.
-                  </p>
-                  <p>
-                    Her experience spans executive and large-scale hiring, talent strategy,
-                    employer branding, organization development, and people transformation
-                    initiatives across diverse business environments.
-                  </p>
-                </div>
-                <div className="space-y-6">
-                  <div>
-                    <p className="font-mono text-[11px] tracking-[0.1em] text-[#87929b] uppercase mb-3">
-                      Industry Expertise
+                      Shalini C
+                    </h3>
+                    <p className="font-mono text-[11px] tracking-[0.12em] text-[#00aeef] uppercase mt-2">
+                      Founder &amp; Consultant
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {experiences.map((exp) => (
-                        <div
-                          key={exp.name}
-                          className="px-4 py-2 rounded-sm border border-[#3e4850] hover:border-[#82cfff]/50 hover:bg-[#00aeef]/5 transition-all duration-200 text-sm text-[#d4e5ee] font-semibold"
-                        >
-                          {exp.name}
+                  </div>
+                  <Link
+                    href="https://www.linkedin.com/in/salinic/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline px-5 py-2.5 rounded-sm text-[11px] inline-flex items-center gap-2 self-start"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    Connect on LinkedIn
+                  </Link>
+                </div>
+
+                {/* Stat tiles */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {[
+                    { value: "17+", label: "Years Experience" },
+                    { value: "5", label: "Global Organisations" },
+                    { value: "C-Suite", label: "Level Hiring" },
+                    { value: "Multi-Sector", label: "Domain Expertise" },
+                  ].map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="bg-[#0d1e24] rounded-sm p-4 border border-[#3e4850]/50 hover:border-[#82cfff]/40 transition-colors text-center"
+                    >
+                      <p className="shimmer-text font-bold font-sans text-xl mb-1">{stat.value}</p>
+                      <p className="font-mono text-[10px] tracking-[0.08em] text-[#87929b] uppercase">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bio + expertise */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-4 text-[#bdc8d1] text-base leading-relaxed">
+                    <p>
+                      Nuvanode is led by Shalini C, a talent and HR leader with over 17 years
+                      of experience across leading organizations in Consulting, Technology,
+                      FMCG, BFSI, Retail, and Manufacturing.
+                    </p>
+                    <p>
+                      Her expertise spans executive and large-scale hiring, talent strategy,
+                      employer branding, organization development, and people transformation
+                      initiatives across diverse business environments.
+                    </p>
+                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <p className="font-mono text-[11px] tracking-[0.1em] text-[#87929b] uppercase mb-3">
+                        Industry Expertise
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {experiences.map((exp) => (
+                          <div
+                            key={exp.name}
+                            className="px-4 py-2 rounded-sm border border-[#3e4850] hover:border-[#82cfff]/50 hover:bg-[#00aeef]/5 transition-all duration-200 text-sm text-[#d4e5ee] font-semibold"
+                          >
+                            {exp.name}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="space-y-2 text-sm text-[#bdc8d1]">
+                      {[
+                        "Executive & Large-scale Hiring",
+                        "Talent Strategy & Employer Branding",
+                        "Organisation Development",
+                        "People Transformation Initiatives",
+                      ].map((item) => (
+                        <div key={item} className="flex items-center gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#00aeef] flex-shrink-0" />
+                          {item}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="space-y-2 text-sm text-[#bdc8d1]">
-                    {[
-                      "Executive & Large-scale Hiring",
-                      "Talent Strategy & Employer Branding",
-                      "Organisation Development",
-                      "People Transformation Initiatives",
-                    ].map((item) => (
-                      <div key={item} className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#00aeef] flex-shrink-0" />
-                        {item}
-                      </div>
-                    ))}
-                  </div>
                 </div>
+
+                {/* Bottom accent */}
+                <div className="h-px bg-gradient-to-r from-[#00aeef]/30 via-[#3e4850]/60 to-transparent" />
               </div>
             </div>
           </div>
