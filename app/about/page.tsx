@@ -198,7 +198,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-6">
               <h2
                 className="text-white font-sans font-bold"
-                style={{ fontSize: "clamp(24px, 3.5vw, 36px)" }}
+                style={{ fontSize: "clamp(15px, 1.6vw, 20px)" }}
               >
                 Nuvanode is led by Shalini and supported by a network of experienced consultants across talent, people, and transformation
               </h2>
@@ -220,7 +220,7 @@ export default function AboutPage() {
                 <img
                   src="/shalini-c.jpeg"
                   alt="Shalini C, Founder & Consultant at Nuvanode"
-                  className="w-full h-72 lg:h-full object-cover object-top"
+                  className="w-full aspect-[9/16] lg:aspect-auto lg:h-full object-cover object-top"
                   style={{ filter: "brightness(0.88) saturate(0.72)" }}
                 />
                 {/* Gradient overlays */}
