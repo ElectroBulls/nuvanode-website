@@ -8,11 +8,12 @@ export const metadata: Metadata = {
 };
 
 const experiences = [
-  { name: "Unilever" },
-  { name: "Wipro" },
-  { name: "KPMG" },
-  { name: "Deloitte" },
-  { name: "Crompton" },
+  { name: "Consulting" },
+  { name: "Technology" },
+  { name: "FMCG" },
+  { name: "BFSI" },
+  { name: "Retail" },
+  { name: "Manufacturing" },
 ];
 
 const values = [
@@ -199,7 +200,7 @@ export default function AboutPage() {
                 className="text-white font-sans font-bold"
                 style={{ fontSize: "clamp(24px, 3.5vw, 36px)" }}
               >
-                The person behind Nuvanode
+                Nuvanode is led by Shalini and supported by a network of experienced consultants across talent, people, and transformation
               </h2>
               <div className="flex-1 h-px bg-[#3e4850] hidden md:block" />
             </div>
@@ -274,7 +275,7 @@ export default function AboutPage() {
                 <div className="space-y-6">
                   <div>
                     <p className="font-mono text-[11px] tracking-[0.1em] text-[#87929b] uppercase mb-3">
-                      Select Experience
+                      Industry Expertise
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {experiences.map((exp) => (

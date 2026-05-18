@@ -108,8 +108,8 @@ const services = [
     imageAlt: "Collaborative team culture and transformation",
     items: [
       {
-        sub: "Culture Programs",
-        detail: "Diagnosing your current culture, defining your desired culture, and building the programs, rituals, and interventions that bring the gap.",
+        sub: "Culture & Change Initiatives",
+        detail: "Culture doesn't shift through policy — it shifts through intentional design. We diagnose where your culture stands today, define where it needs to be, and build the programs, rituals, and change interventions that bridge the gap. From leadership alignment to frontline adoption, we ensure cultural change is felt at every level of your organization.",
       },
       {
         sub: "Performance Management",
@@ -118,6 +118,10 @@ const services = [
       {
         sub: "Talent Management Frameworks",
         detail: "Building integrated frameworks for career development, succession planning, and high-potential identification that retain your best people and grow your next generation of leaders.",
+      },
+      {
+        sub: "Employer Branding",
+        detail: "Your reputation as an employer is one of your most powerful talent acquisition tools. We help you articulate a compelling Employee Value Proposition (EVP), build the brand narrative that resonates with the talent you want to attract, and activate it across every hiring touchpoint — so the right people seek you out, and the best ones choose to stay.",
       },
     ],
   },
@@ -171,7 +175,7 @@ export default function ServicesPage() {
                     <img
                       src={service.image}
                       alt={service.imageAlt}
-                      className="w-full aspect-[4/3] object-cover"
+                      className="w-full aspect-[9/16] object-cover"
                       style={{ filter: "brightness(0.6) saturate(0.6)" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#05151b]/80 to-transparent" />
