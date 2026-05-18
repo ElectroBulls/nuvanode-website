@@ -71,17 +71,17 @@ export default function Navigation() {
           </div>
 
           {/* CTA + Hamburger */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1.5 md:gap-4">
             <Link
               href="https://www.linkedin.com/company/nuvanode-consulting/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex btn-primary px-6 py-2.5 rounded-sm text-[11px]"
+              className="inline-flex btn-primary px-3 py-1.5 md:px-6 md:py-2.5 rounded-sm text-[10px] md:text-[11px] whitespace-nowrap"
             >
               Connect Now
             </Link>
             <button
-              className="md:hidden text-[#82cfff] p-2"
+              className="md:hidden text-[#82cfff] p-1.5"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -143,9 +143,9 @@ export default function Navigation() {
               href="https://www.linkedin.com/company/nuvanode-consulting/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary mt-4 py-3 rounded-sm text-[11px]"
+              className="btn-primary mt-3 py-2.5 rounded-sm text-[11px] text-center"
             >
-              Connect Now
+              Connect on LinkedIn
             </Link>
           </div>
         </div>
