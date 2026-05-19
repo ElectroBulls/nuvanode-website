@@ -28,7 +28,7 @@ const contactItems = [
     label: "Phone",
     value: "+91 75063 68068",
     href: "tel:+917506368068",
-    sub: "Monday to Friday, 9am – 7pm IST",
+    sub: "9Am to 7Pm IST",
   },
   {
     icon: (
