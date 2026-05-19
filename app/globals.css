@@ -132,21 +132,9 @@ input:focus, textarea:focus, select:focus {
 ::-webkit-scrollbar-thumb:hover { background: rgba(0,174,239,0.6); }
 
 /* ── Section fade-in animations ──
-   Elements are VISIBLE by default (SSR, no-JS, slow connections).
-   Hiding only activates once JS has set up the observer and already-
-   visible elements have been marked .visible (double-RAF in ScrollAnimator).
-   This prevents the blank-page-on-first-load issue. */
-.animate-on-scroll {
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-html.animations-ready .animate-on-scroll:not(.visible) {
-  opacity: 0;
-  transform: translateY(30px);
-}
+   NO opacity/visibility rules here at all.
+   Hiding and transitions are applied purely via JS inline styles in
+   ScrollAnimator so CSS never makes content invisible before JS loads. */
 
 /* ── Primary button ── */
 .btn-primary {
