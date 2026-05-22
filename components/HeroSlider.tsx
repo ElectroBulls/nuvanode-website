@@ -5,19 +5,19 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     label: "High-Impact Teams",
-    sub: "We identify and place visionary leaders who don't just fill roles — they elevate entire organizations.",
+    sub: "Helping businesses attract and build talent that creates meaningful impact.",
     image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600&q=80&auto=format&fit=crop",
     imageAlt: "Business professionals in a modern office setting",
   },
   {
     label: "Scalable People Practices",
-    sub: "From org design to HR infrastructure, we build the systems that let your business grow without friction.",
+    sub: "Creating practical systems and frameworks that support sustainable growth.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&auto=format&fit=crop",
     imageAlt: "Strategy and planning session with professionals",
   },
   {
     label: "Strong Culture",
-    sub: "Culture is your competitive edge. We help you define it, embed it, and sustain it as you scale.",
+    sub: "Enabling environments where talent and organizations thrive.",
     image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80&auto=format&fit=crop",
     imageAlt: "Diverse team collaborating in a modern workspace",
   },

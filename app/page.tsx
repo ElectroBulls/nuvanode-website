@@ -45,13 +45,6 @@ const whatWeDo = [
   },
 ];
 
-const stats = [
-  { value: "17+", label: "Years of Experience" },
-  { value: "5", label: "Global Organizations" },
-  { value: "4", label: "Core Service Areas" },
-  { value: "100%", label: "Advisory Focused" },
-];
-
 export default function HomePage() {
   return (
     <div className="pt-24">
@@ -59,7 +52,7 @@ export default function HomePage() {
       <HeroSlider />
 
       {/* ── Value Proposition ── */}
-      <section className="py-20 border-b border-white/5">
+      <section className="py-20 border-b border-white/5 bg-[#021016]">
         <div className="max-w-[1280px] mx-auto px-6 md:px-16 text-center animate-on-scroll">
           <p className="font-mono text-base md:text-lg font-bold tracking-[0.12em] text-[#00aeef] uppercase mb-5">
             Our Purpose
@@ -71,31 +64,6 @@ export default function HomePage() {
             Helping growing businesses build high-impact teams, scalable people
             practices, and strong culture.
           </p>
-        </div>
-      </section>
-
-      {/* ── Stats ── */}
-      <section className="py-16 bg-[#021016] border-y border-white/5">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s, i) => (
-              <div
-                key={i}
-                className="text-center animate-on-scroll"
-                style={{ transitionDelay: `${i * 0.1}s` }}
-              >
-                <p
-                  className="shimmer-text font-bold font-sans"
-                  style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
-                >
-                  {s.value}
-                </p>
-                <p className="text-[#87929b] font-mono text-[11px] tracking-[0.08em] uppercase mt-1">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

@@ -23,7 +23,7 @@ const phases: Phase[] = [
   {
     id: "01",
     title: "Diagnosis",
-    tagline: "Understand before you act",
+    tagline: "Discover before design",
     description:
       "Every effective people solution begins with an honest diagnosis. We start by deeply understanding your organization — its context, history, culture, and the specific challenge at hand. Through structured discovery sessions, gap analyses, HR audits, and stakeholder interviews, we build a clear picture of where you are today and what's actually driving the challenge.",
     items: ["Discovery & Context Setting", "Gap Analysis", "HR & Talent Audits", "Stakeholder Interviews"],
